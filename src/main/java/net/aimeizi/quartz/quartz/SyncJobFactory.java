@@ -9,9 +9,11 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
+import org.omg.CORBA.Environment;
 import org.quartz.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.quartz.QuartzJobBean;
 
 import javax.management.MalformedObjectNameException;
@@ -28,13 +30,16 @@ import java.net.UnknownHostException;
 @DisallowConcurrentExecution
 public class SyncJobFactory extends QuartzJobBean {
 
+//    @Autowired
+//    Environment environment;
+
     /* 日志对象 */
     private static final Logger LOG = LoggerFactory.getLogger(SyncJobFactory.class);
 
     protected void executeInternal(JobExecutionContext context) throws JobExecutionException {
 
         try {
-            LOG.info("SyncJobFactory execute" + IPAddressKowalski.getIpAddressAndPort());
+            LOG.info("SyncJobFactory execute" + IPAddressKowalski.getIpAddressAndPort() + " port:"+IPAddressKowalski.getTomcatPort());
         } catch (MalformedObjectNameException e) {
             e.printStackTrace();
         } catch (UnknownHostException e) {

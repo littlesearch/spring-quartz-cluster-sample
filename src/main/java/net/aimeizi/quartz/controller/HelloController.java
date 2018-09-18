@@ -19,8 +19,8 @@ import java.net.UnknownHostException;
 public class HelloController {
     private Logger logger = LoggerFactory.getLogger(HelloController.class);
 
-    @Autowired
-    Environment environment;
+//    @Autowired
+//    Environment environment;
     @ResponseBody()
     @RequestMapping(value = "/say-hello.do", method = RequestMethod.GET)
     public String sayHello() throws MalformedObjectNameException, UnknownHostException {

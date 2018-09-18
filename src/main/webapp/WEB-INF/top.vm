@@ -39,7 +39,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="list-schedule-job.shtml">基于Quartz的分布式定时任务</a>
+                <a class="navbar-brand" href="list-schedule-job.shtml"> </a>
+                基于Quartz的分布式定时任务
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -47,7 +48,6 @@
             </div>
         </div>
     </nav>
-    <div class="jumbotron jumbotron-margin-top">
-        <h1>Spring Quartz分布式定时任务</h1>
+    <div class="jumbotron jumbotron-margin-top"> </div>
+        <p>Spring Quartz分布式定时任务</p>
         <p>Spring整合Quartz基于数据库的分布式定时任务，可动态添加、删除、修改定时任务。</p>
-    </div>
