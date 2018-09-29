@@ -34,7 +34,8 @@ public class ScheduleJobInit {
             LOG.info("init");
         }
 
-        scheduleJobService.initScheduleJob();
+        //除非发生数据不一致的情况，否则，下面这个动作非必须。
+//        scheduleJobService.initScheduleJob();
 
         if (LOG.isInfoEnabled()) {
             LOG.info("end");

@@ -21,7 +21,6 @@ public class IPAddressKowalski{
         String host = InetAddress.getLocalHost().getHostAddress();
         String port = objectNames.iterator().next().getKeyProperty("port");
         String ipadd = "http" + "://" + host + ":" + port;
-        System.out.println(ipadd);
         return ipadd;
     }
 
